@@ -1,4 +1,4 @@
-genre = []
-authors = []
+genre = [economics,neural_networks,psychology,pybooks]
+
 
 
