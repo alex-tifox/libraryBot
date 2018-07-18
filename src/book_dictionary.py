@@ -8,7 +8,7 @@ neural_networks = {"Create_your_neural_network_p1.pdf":"Создайте сво�
 psychology = {"Psihologia_vliyania.epub":"Психология влияния",
               "Ronin_Roman_Your own intelligence.PDF":"Ронин Роман. Своя разведка"}
 
-pybooks = {"Allen_Downey_—_Think_Python_How.pdf":"Аллен Доуни. Как думает Питон"}
+pybooks = {"Allen_Downey_Think_Python_How.pdf":"Аллен Доуни. Как думает Питон"}
 
 
 
