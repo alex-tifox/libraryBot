@@ -24,11 +24,11 @@ def handle_start(message):
 def handle_start(message):
 	if message.text == "Economics":
 
-		directory = "/home/alexfox/libraryBot/books/economics"
+		directory = "../books/economics"
 		all_files_in_directory = os.listdir(directory)
 
 		for book in all_files_in_directory:
-			bot.send_message(message.from_user.id, book_dictionary.economics["all_files_in_directory"])
+			bot.send_message(message.from_user.id, book_dictionary.economics[book])
 			file = open(os.path.join(directory, book), 'rb')
 			bot.send_document(message.from_user.id, file)
 			file.close()
@@ -38,11 +38,11 @@ def handle_start(message):
 
 	elif message.text == "NeuralNetworks":
 
-		directory = "/home/alexfox/libraryBot/books/neural_networks"
+		directory = "../books/neural_networks"
 		all_files_in_directory = os.listdir(directory)
 
 		for book in all_files_in_directory:
-			bot.send_message(message.from_user.id, book_dictionary.neural_networks["all_files_in_directory"])
+			bot.send_message(message.from_user.id, book_dictionary.neural_networks[book])
 			file = open(os.path.join(directory, book), 'rb')
 			bot.send_document(message.from_user.id, file)
 			file.close()
@@ -52,11 +52,11 @@ def handle_start(message):
 
 	elif message.text == "Psychology":
 
-		directory = "/home/alexfox/libraryBot/books/psychology"
+		directory = "../books/psychology"
 		all_files_in_directory = os.listdir(directory)
 
 		for book in all_files_in_directory:
-			bot.send_message(message.from_user.id, book_dictionary.psychology["all_files_in_directory"])
+			bot.send_message(message.from_user.id, book_dictionary.psychology[book])
 			file = open(os.path.join(directory, book), 'rb')
 			bot.send_document(message.from_user.id, file)
 			file.close()
@@ -66,11 +66,11 @@ def handle_start(message):
 
 	elif message.text == "PythonBooks":
 
-		directory = "/home/alexfox/libraryBot/books/pybooks"
+		directory = "../books/pybooks"
 		all_files_in_directory = os.listdir(directory)
 
 		for book in all_files_in_directory:
-			bot.send_message(message.from_user.id, book_dictionary.pybooks["all_files_in_directory"])
+			bot.send_message(message.from_user.id, book_dictionary.pybooks[book])
 			file = open(os.path.join(directory, book), 'rb')
 			bot.send_document(message.from_user.id, file)
 			file.close()
