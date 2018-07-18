@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 economics = {"Cryptomatics_2_0.pdf": "Криптвоюматика 2.0",
              "Hulinomika_25.pdf":"Хулиномика 25"}
 
