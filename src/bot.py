@@ -2,8 +2,9 @@
 
 import os
 
-import telebot
 import config
+import telebot
+import book_dictionary
 from telebot import types
 
 bot = telebot.TeleBot(config.token)
@@ -23,11 +24,11 @@ def handle_start(message):
 def handle_start(message):
 	if message.text == "Economics":
 
-		directory = "libraryBot/books/economics"
+		directory = "/home/alexfox/libraryBot/books/economics"
 		all_files_in_directory = os.listdir(directory)
 
 		for book in all_files_in_directory:
-			bot.send_message(message.from_user.id, all_files_in_directory)
+			bot.send_message(message.from_user.id, book_dictionary.economics["all_files_in_directory"])
 			file = open(os.path.join(directory, book), 'rb')
 			bot.send_document(message.from_user.id, file)
 			file.close()
@@ -37,11 +38,11 @@ def handle_start(message):
 
 	elif message.text == "NeuralNetworks":
 
-		directory = "libraryBot/books/neural_networks"
+		directory = "/home/alexfox/libraryBot/books/neural_networks"
 		all_files_in_directory = os.listdir(directory)
 
 		for book in all_files_in_directory:
-			bot.send_message(message.from_user.id, all_files_in_directory)
+			bot.send_message(message.from_user.id, book_dictionary.neural_networks["all_files_in_directory"])
 			file = open(os.path.join(directory, book), 'rb')
 			bot.send_document(message.from_user.id, file)
 			file.close()
@@ -51,11 +52,11 @@ def handle_start(message):
 
 	elif message.text == "Psychology":
 
-		directory = "libraryBot/books/psychology"
+		directory = "/home/alexfox/libraryBot/books/psychology"
 		all_files_in_directory = os.listdir(directory)
 
 		for book in all_files_in_directory:
-			bot.send_message(message.from_user.id, all_files_in_directory)
+			bot.send_message(message.from_user.id, book_dictionary.psychology["all_files_in_directory"])
 			file = open(os.path.join(directory, book), 'rb')
 			bot.send_document(message.from_user.id, file)
 			file.close()
@@ -65,11 +66,11 @@ def handle_start(message):
 
 	elif message.text == "PythonBooks":
 
-		directory = "libraryBot/books/pybooks"
+		directory = "/home/alexfox/libraryBot/books/pybooks"
 		all_files_in_directory = os.listdir(directory)
 
 		for book in all_files_in_directory:
-			bot.send_message(message.from_user.id, all_files_in_directory)
+			bot.send_message(message.from_user.id, book_dictionary.pybooks["all_files_in_directory"])
 			file = open(os.path.join(directory, book), 'rb')
 			bot.send_document(message.from_user.id, file)
 			file.close()
@@ -77,11 +78,4 @@ def handle_start(message):
 			print(os.path.join(directory, book))
 
 
-
 bot.polling(none_stop=True)
-
-directory = "/home/alex/PycharmProjects/bot/books/economics"
-all_files_in_directory = os.listdir(directory)
-for book in all_files_in_directory:
-	file = open(os.path.join(directory, book), 'rb')
-	print(os.path.join(directory, book))
