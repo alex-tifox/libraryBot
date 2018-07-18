@@ -23,7 +23,7 @@ def handle_start(message):
 def handle_start(message):
 	if message.text == "Economics":
 
-		directory = "/home/alex/PycharmProjects/bot/books/economics"
+		directory = "libraryBot/books/economics"
 		all_files_in_directory = os.listdir(directory)
 
 		for book in all_files_in_directory:
@@ -37,7 +37,7 @@ def handle_start(message):
 
 	elif message.text == "NeuralNetworks":
 
-		directory = "/home/alex/PycharmProjects/bot/books/neural_networks"
+		directory = "libraryBot/books/neural_networks"
 		all_files_in_directory = os.listdir(directory)
 
 		for book in all_files_in_directory:
@@ -51,7 +51,7 @@ def handle_start(message):
 
 	elif message.text == "Psychology":
 
-		directory = "/home/alex/PycharmProjects/bot/books/psychology"
+		directory = "libraryBot/books/psychology"
 		all_files_in_directory = os.listdir(directory)
 
 		for book in all_files_in_directory:
@@ -65,7 +65,7 @@ def handle_start(message):
 
 	elif message.text == "PythonBooks":
 
-		directory = "/home/alex/PycharmProjects/bot/books/pybooks"
+		directory = "libraryBot/books/pybooks"
 		all_files_in_directory = os.listdir(directory)
 
 		for book in all_files_in_directory:
